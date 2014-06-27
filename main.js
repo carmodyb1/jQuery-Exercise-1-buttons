@@ -91,51 +91,25 @@ $(".confirm-box").on("click",function(e) {
 
 // Part III
 
+
+// Adding one giant button with popup that stays in center of the webpage by using position fixed
+// $(".huge-button").on("click", function() {
+//   var divbox = $("<div><h1 class=' popuptext'>Text for popup here</h1></div>");
+//   $(".huge-button").after(divbox);
+// });
+
+
 $(".huge-button").on("click", function() {
-  var divbox = $("<div><h1 class=' popuptext'>Text for popup here</h1></div>");
-  $(".huge-button").after(divbox);
-  
-
-
-
-  // $("<h1>").css("font", "green");
-
+  var divbox = $("<div class='popup'><h1 class='popuptext'>Text for popup here</h1></div>");
+  $(".huge-button").after(divbox); divbox.append("<button class='close'>Close</button>")
 });
 
 
+$(document).on("click", ".close", function(){
+  $(".popup").remove();
+})
 
 
-
-
+// closing of first code line for jQuery
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
